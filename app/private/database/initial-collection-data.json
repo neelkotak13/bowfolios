@@ -94,6 +94,7 @@
             "Evolutionary Computation"
           ],
           "title": "Associate Professor, Information and Computer Sciences",
+          "location": "Honolulu, HI",
           "picture": "/images/altenberg.jpg"
         },
         {
@@ -101,6 +102,7 @@
           "lastName": "Baek",
           "username": "baek",
           "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
+          "location": "Honolulu, HI",
           "interests": [
             "Computer Vision"
           ],
