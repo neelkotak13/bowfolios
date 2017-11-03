@@ -34,3 +34,7 @@
   font-weight: 900;
   font-size: 36px;
 }
+
+.ui.large.centered.image {
+  width: 1000px;
+}

@@ -1,5 +1,6 @@
 import { Template } from 'meteor/templating';
 import { Meteor } from 'meteor/meteor';
+import { FlowRouter } from 'meteor/kadira:flow-router';
 
 /* eslint-disable no-console */
 
@@ -29,5 +30,12 @@ Template.Cas_Login.events({
     };
     Meteor.loginWithCas(callback);
     return false;
+  },
+  'click .help' (event) {
+    event.preventDefault();
+    // Contacts.deleteOne(FlowRouter.getParam('_id'));
+    // Contacts.remove( FlowRouter.getParam('_id') );
+    // Contacts.remove({'_id'});
+    FlowRouter.go('Landing_Page');
   },
 });

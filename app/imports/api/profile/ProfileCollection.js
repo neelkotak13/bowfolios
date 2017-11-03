@@ -24,14 +24,16 @@ class ProfileCollection extends BaseCollection {
       firstName: { type: String, optional: true },
       lastName: { type: String, optional: true },
       bio: { type: String, optional: true },
-      interests: { type: Array, optional: true },
-      'interests.$': { type: String },
+      // interests: { type: Array, optional: true },
+      // 'interests.$': { type: String },
       title: { type: String, optional: true },
-      location: { type: String, optional: true },
-      picture: { type: SimpleSchema.RegEx.Url, optional: true },
-      github: { type: SimpleSchema.RegEx.Url, optional: true },
-      facebook: { type: SimpleSchema.RegEx.Url, optional: true },
-      instagram: { type: SimpleSchema.RegEx.Url, optional: true },
+      classTaken: { type: String, optional: true },
+      classTaking: { type: String, optional: true },
+      // location: { type: String, optional: true },
+      // picture: { type: SimpleSchema.RegEx.Url, optional: true },
+      // github: { type: SimpleSchema.RegEx.Url, optional: true },
+      // facebook: { type: SimpleSchema.RegEx.Url, optional: true },
+      // instagram: { type: SimpleSchema.RegEx.Url, optional: true },
     }, { tracker: Tracker }));
   }
 
@@ -57,8 +59,7 @@ class ProfileCollection extends BaseCollection {
    * if one or more interests are not defined, or if github, facebook, and instagram are not URLs.
    * @returns The newly created docID.
    */
-  define({ firstName = '', lastName = '', username, bio = '', interests = [], picture = '', title = '', github = '',
-      facebook = '', instagram = '', location = '' }) {
+  define({ firstName = '', lastName = '', username, bio = '', classesTaken = '', classesTaking = '' }) {
     // make sure required fields are OK.
     const checkPattern = { firstName: String, lastName: String, username: String, bio: String, picture: String,
       title: String, location: String };
